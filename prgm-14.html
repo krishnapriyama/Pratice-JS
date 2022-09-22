@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <p id="add">Enter the size of array: <input id="size"></p>
+   <button onclick="add()">Add</button>
+   <script>
+      function add() {
+         n = parseInt(document.getElementById("size").value);
+         var a = [];
+         var b = [];
+         var c = [];
+         document.write("Size of array is " + n);
+         for (var i = 0; i < n; i++) {
+            a[i] = [];
+            for (var j = 0; j < n; j++) {
+               a[i][j] = Number(prompt("Enter array Element for array 1"));
+            }
+         }
+
+
+         for (var i = 0; i < n; i++) {
+            b[i] = [];
+            for (var j = 0; j < n; j++) {
+               b[i][j] = Number(prompt("Enter array Element for array 2"));
+            }
+         }
+
+         document.write("<br>" + "Array 1:" + "<br>");
+         for (var i = 0; i < n; i++) {
+            c[i] = [];
+            for (var j = 0; j < n; j++) {
+               document.write(a[i][j] + "  ");
+            }
+
+            document.write("<br>");
+         }
+
+         document.write("\nArray 2:" + "<br>")
+         for (var i = 0; i < n; i++) {
+
+            for (var j = 0; j < n; j++) {
+               document.write(b[i][j] + "  ");
+            }
+
+            document.write("<br>");
+         }
+
+         document.write("\nSum of array 1 and array 2" + "<br>");
+         for (var i = 0; i < n; i++) {
+
+            for (var j = 0; j < n; j++) {
+               c[i][j] = a[i][j] + b[i][j];
+            }
+         }
+         for (var i = 0; i < n; i++) {
+
+            for (var j = 0; j < n; j++) {
+               document.write(c[i][j] + "  ");
+            }
+            document.write("<br>");
+         }
+
+
+      }  
+   </script>
+</body>
+
+</html>

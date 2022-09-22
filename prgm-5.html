@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <label>
+      Mark of Student
+   </label>
+   <input type="text" id="mark">
+   <input type="button" value="Check" onclick="check()">
+
+   <div id="res"></div>
+
+   <script>
+      function check(){
+         var mark = parseFloat(document.getElementById("mark").value);
+         let result;
+         if (mark >= 90) {
+            result = "A grade"
+         } else if (mark>80 && mark<=89) {
+            result = "B grade"
+         } else if (mark>70 && mark<=79) {
+            result = "C grade"
+         } else if (mark>60 && mark<=69) {
+            result = "D grade"
+         } else if (mark>50 && mark<=59) {
+            result = "E grade"
+         } else{
+            result="Try Again Later - Failed"
+         }
+
+         document.getElementById("res").innerHTML = result;
+      }
+   </script>
+</body>
+</html>

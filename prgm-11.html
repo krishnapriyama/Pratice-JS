@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <p id="even">Enter the size of array: <input id="size"></p>
+   <button onclick="evencount()">count</button>
+
+   <script>
+      function evencount() {
+         n = parseInt(document.getElementById("size").value);
+         var a = [];
+         var count = 0;
+         for (var i = 0; i < n; i++) {
+            a[i] = prompt('Enter array Element ' + (i + 1));
+
+         }
+         document.getElementById("even").innerHTML += "<br><br>Size of array is " + n;
+         document.getElementById("even").innerHTML += "<br>Array elements are: " + a;
+         for (var i = 0; i < n; i++) {
+            if (a[i] % 2 == 0) {
+               count = count + 1;
+            }
+
+         }
+         document.getElementById("even").innerHTML += "<br>Number of even numbers in the given array is " + count;
+      }
+
+   </script>
+</body>
+
+</html>

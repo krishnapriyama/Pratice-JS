@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      let myArray = [];
+      let size = Number(prompt("Enter the size"));
+      for (let i = 0; i < size; i++) {
+         myArray[i] = Number(prompt("Enter elements of array"));
+      }
+
+      console.log("Enetered size is " + size);
+      console.log("Elements");
+      for (let i = 0; i < size; i++) {
+         console.log(myArray[i]);
+      }
+
+      myFilter(myArray, (myarray) => {
+         var sum = 0;
+         for (let i = 0; i < myArray.length; i++) {
+            sum = sum = myArray[i];
+         }
+         console.log("Sum: " + sum);
+         if (sum % 2 == 0) {
+            return true;
+         } else {
+            return false;
+         }
+      })
+
+      function myFilter(a,ss) {
+         if (ss(a) % 2 == true) {
+            console.log("Even");
+         } else {
+            console.log(false);
+         }
+      }
+   </script>
+</body>
+
+</html>
+
+let myArray = [];
+let size = Number(prompt("Enter the size"));
+for (let i = 0; i < size; i++) { myArray[i]=Number(prompt("Enter elements of array")); } console.log("Enetered size is " + size);
+console.log(" Elements"); for (let i=0; i < size; i++) { console.log(myArray[i]); } myFilter(myArray, (myarray)=> {
+   var sum = 0;
+   for (let i = 0; i < myArray.length; i++) { sum=sum=myArray[i]; } console.log("Sum: " + sum);
+   if (sum % 2 == 0) {
+      return true;
+   } else {
+      return false;
+   }
+})
+
+function myFilter(a, ss) {
+   if (ss(a) % 2 == true) {
+      console.log(" Even"); } else { console.log(false); } }

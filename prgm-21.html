@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <p>Enter the array limit<input id="size"></p>
+   <button onclick="adjcent()">Ok</button>
+   <script>
+      function adjcent() {
+         limit = parseInt(document.getElementById("size").value);
+         document.write("Array limit: " + limit);
+         var a = [];
+         var b = [];
+         for (i = 0; i < limit; i++) {
+            a[i] = parseInt(prompt("Enter the array elements"));
+         }
+
+         document.write("<br>" + "Array elemts are: " + a);
+
+         for (var i = 0; i < limit; i++) {
+
+            b[i] = a[i] * a[i + 1] + " ";
+
+         }
+         document.write("<br>" + "Array elemts after multiplication: ");
+         for (i = 0; i < limit - 1; i++) {
+            document.write(b[i]);
+         }
+
+      }
+
+   </script>
+
+</body>
+
+</html>

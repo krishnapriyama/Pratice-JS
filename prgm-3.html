@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <label>
+      Principal Amount
+   </label>
+   <input type="text" id="P">
+   <label>
+      Interset Rate
+   </label>
+   <input type="text" id="R">
+   <label>
+      Number of Year
+   </label>
+   <input type="text" id="N">
+   <input type="button" value="Calculate" onclick="add()">
+  
+   <div id="res"></div>
+
+
+   <script>
+      function add() {
+         var p = parseInt(document.getElementById("P").value);
+         var r = parseFloat(document.getElementById("R").value);
+         var n = parseFloat(document.getElementById("N").value);
+         var cal = (p*r*n)/100;
+         document.getElementById("res").innerHTML = cal;
+      }
+
+   </script>
+</body>
+</html>

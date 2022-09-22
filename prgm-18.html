@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <p>Enter the marks scored by the students</p>
+   <p>Written Test: <input id="wt"></p>
+   <p>Lab Exam: <input id="le"></p>
+   <p>Assignments: <input id="as"></p>
+   <button onclick="calc()">Calculate</button>
+   <script>
+      function calc() {
+         var w, l, a;
+         w = Number(document.getElementById("wt").value);
+         l = Number(document.getElementById("le").value);
+         a = Number(document.getElementById("as").value);
+         document.write("Written Test:  " + w);
+         document.write("<br>" + "Lab Exam:  " + l);
+         document.write("<br>" + "Assignments:  " + a);
+         var grade;
+         grade = (w * 70) / 100 + (l * 20) / 100 + (a * 10) / 100;
+         document.write("<br>" + "Grade of the student is  " + grade);
+
+      }
+   </script>
+
+</body>
+
+</html>

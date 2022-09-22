@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+
+      limit = prompt("Enter the limit");
+      var k = 1;
+      document.write("Your limit is " + limit);
+      document.write("<br>");
+
+      for (var i = 0; i < limit; i++) {
+         for (var j = 0; j <= i; j++) {
+            document.write(k++ + "    ");
+         }
+         document.write("<br>");
+      }
+   </script>
+</body>
+
+</html>

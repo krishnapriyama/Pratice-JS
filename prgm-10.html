@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <label>
+      Enter the size of array
+   </label>
+   <input type="text" id="num">
+   <input type="button" value="Swap" onclick="swap()">
+
+
+   <script>
+      function swap() {
+         var n = parseInt(document.getElementById("num").value);
+         var a = [];
+         var b = [];
+
+         for (let i = 0; i < n; i++) {
+            a[i] = prompt("Enter the elements in 1st array"+(i+1));
+         }
+         console.log("Array before swapping: " + a);
+         for (let i = 0; i < n; i++) {
+            b[i] = prompt("Enter the elements in 2st array"+(i+1));
+         }
+         console.log("Array before swapping: " + b);
+
+
+         for (let i = 0; i < n; i++) {
+            var temp = a[i];
+            a[i] = b[i];
+            b[i] = temp;
+         }
+
+         console.log("Array after awpping: " + a);
+         console.log("Array after awpping: " + b);
+      }
+   </script>
+</body>
+
+</html>

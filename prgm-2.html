@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <label>
+      Enter 1st number
+   </label>
+   <input type="text" id="n1">
+   <label>
+      Enter 2st number
+   </label>
+   <input type="text" id="n2">
+
+   <input type="button" value="Addition" onclick="add()">
+   <div id="res"></div>
+
+   <script>
+      function add() {
+         var n1 = parseInt(document.getElementById("n1").value);
+         var n2 = parseFloat(document.getElementById("n2").value);
+         var sum = n1 + n2;
+         document.getElementById("res").innerHTML = sum;
+      }
+
+   </script>
+</body>
+</html>
